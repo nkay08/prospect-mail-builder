@@ -16,7 +16,8 @@ RUN git clone https://github.com/julian-alarcon/prospect-mail.git prospect-mail
 RUN mkdir -p /prospect/prospect-mail/dist && chmod -R 777 /prospect/prospect-mail/dist
 
 COPY ./build.sh /prospect/build.sh
+RUN chmod +x /prospect/build.sh
 
 VOLUME /prospect/dist
 
-CMD ['bash', '/prospect/build.sh']
+CMD ["bash", "-c", "source /root/.nvm/nvm.sh && /prospect/build.sh"]
