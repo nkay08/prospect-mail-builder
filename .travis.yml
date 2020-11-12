@@ -1,0 +1,19 @@
+language: node_js
+node_js:
+  - 12
+
+install:
+  - npm install -g yarn
+
+script:
+  - git clone https://github.com/julian-alarcon/prospect-mail.git prospect-mail
+  - cd prospect-mail
+  - yarn
+  - yarn run dist:linux
+
+deploy:
+  provider: releases
+  file: "prospect-mail/dist"
+  skip_cleanup: true
+  on:
+    tags: true
