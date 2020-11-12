@@ -12,7 +12,7 @@ until [ "$n" -ge "$max_tries" ]
 do
    yarn run dist:linux && break  # substitute your command here
    n=$((n+1)) 
-   sleep 15
+   sleep 2
 done
 
 if [ "$n" -ge "$max_tries" ]; then
