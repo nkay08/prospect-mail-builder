@@ -4,6 +4,7 @@ node_js:
 
 install:
   - npm install -g yarn
+  - apt-get install rpm  
 
 script:
   - git clone https://github.com/julian-alarcon/prospect-mail.git prospect-mail
