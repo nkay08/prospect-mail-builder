@@ -3,4 +3,4 @@ services:
   prospect:
     build: .
     volumes:
-      - ./dist:/prospect/ydist
+      - ./dist:/prospect/dist
