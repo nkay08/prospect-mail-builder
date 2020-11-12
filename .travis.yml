@@ -2,19 +2,16 @@ language: node_js
 node_js:
   - 12
 
-install:
-  - npm install -g yarn
-  - sudo apt-get install rpm  
+services:
+- docker
+
 
 script:
-  - git clone https://github.com/julian-alarcon/prospect-mail.git prospect-mail
-  - cd prospect-mail
-  - yarn
-  - yarn run dist:linux
+- docker-compose run prospect
 
 deploy:
   provider: releases
-  file: "prospect-mail/dist"
+  file: "dist"
   skip_cleanup: true
   on:
     tags: true
