@@ -17,7 +17,7 @@ deploy:
     - $TRAVIS_BUILD_DIR/dist/prospect-mail_*.snap
     - $TRAVIS_BUILD_DIR/dist/prospect-mail-*.tar.gz
 #  file: "dist"
-#  skip_cleanup: true
+  skip_cleanup: true
   on:
     branch: main
     tags: true
