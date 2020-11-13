@@ -1,11 +1,7 @@
+if: (tag =~ /^v/)
 language: shell
 services:
 - docker
-
-branch:
-  - main
-
-if: tag =~ ^v
 
 script:
 - docker-compose run prospect
