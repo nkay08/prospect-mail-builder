@@ -3,6 +3,9 @@ language: shell
 services:
 - docker
 
+on:
+  branch: main
+  tags: true
 
 script:
 - docker-compose run prospect
