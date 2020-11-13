@@ -3,9 +3,7 @@ language: shell
 services:
 - docker
 
-on:
-  branch: main
-  tags: true
+if: (tag =~ ^v) AND (branch = main)
 
 script:
 - docker-compose run prospect
