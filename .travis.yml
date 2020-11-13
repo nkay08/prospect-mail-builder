@@ -9,7 +9,11 @@ script:
 
 deploy:
   provider: releases
-  file: "dist"
+  github-token: $GITHUB_TOKEN
+#  local_dir: dist
+  file: {Prospect Mail-*.AppImage,prospect-mail_*.snap,prospect-mail-*.tar.gz}
+#  file: "dist"
   skip_cleanup: true
   on:
+    branch: main
     tags: true
